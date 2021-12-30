@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>IMAGON</title>
     <meta name="theme-color" content="#26C076">
-    <link rel="icon" href="{{ asset('assets/img/logo.png') }}" type="image/icon type">
+    <link rel="icon" href="{{ asset('img/logo.png') }}" type="image/icon type">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <meta name="keywords" content="API,APIIMAGE,image api , image compress , image size , upload image , compressed image , image compressed , less image">
