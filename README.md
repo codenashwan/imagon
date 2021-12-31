@@ -11,7 +11,3 @@ IMAGON is an image optimization and compression API Free, that helps improve you
 ![image](https://user-images.githubusercontent.com/35005761/147753967-326f6b33-1852-449a-be5e-f8f8150a0aab.png)
 
 ![image](https://user-images.githubusercontent.com/35005761/147753977-ca732a55-1087-4439-b26a-28b100fe1811.png)
-
-![image](https://user-images.githubusercontent.com/35005761/147753994-46b5b39b-872f-40dc-b28b-9264f15ff702.png)
-
-
