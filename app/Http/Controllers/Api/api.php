@@ -22,6 +22,7 @@ class api extends Controller
             'quality' => 'numeric|min:0|max:100',
             'blur' => 'numeric|min:0|max:100',
             'brightness' => 'numeric|min:-100|max:100',
+            'filp' => 'mimes:v,h'
             
         ]);
         if ($validator->fails()){
@@ -47,6 +48,15 @@ class api extends Controller
                 $value = $this->myExplode($request->query('fit'));
                 $image->fit($value[0],$value[1]);
             }
+            // flip
+            if($request->query('flip')){
+                $image->flip($request->query('flip'));
+            }
+            // greyscale
+            if($request->query('greyscale') == 'true'){
+                $image->greyscale();
+            }
+
             $image->save('upload/thumb/'.$newfilename , $request->query('quality') ?? 40)->orientate();
             $request->image->storeAs('full', $newfilename, 'mydir');
             // images::create([
@@ -57,7 +67,8 @@ class api extends Controller
                 return Response::json(['url'=>public_path('upload/thumb/'.$newfilename)]);
             }else{
             return Response::download(public_path('upload/thumb/'.$newfilename));  
-            }      
+            }
+            $image->destroy();      
         }
     }
 

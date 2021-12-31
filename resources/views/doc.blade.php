@@ -21,10 +21,10 @@
 
 
     @component('components.example',[
-        'image' => 'img/quality.jpg',
-        'size' => '1.72Mb',
-        'image2' => 'img/quality2.jpg',
-        'size2' => '58.1Kb'
+    'image' => 'img/quality.jpg',
+    'size' => '1.72Mb',
+    'image2' => 'img/quality2.jpg',
+    'size2' => '58.1Kb'
     ])
     @endcomponent
     <hr>
@@ -35,10 +35,10 @@
     'code' => '/api/upload?blur=50'])
     @endcomponent
     @component('components.example',[
-        'image' => 'img/blur.jpg',
-        'size' => '1.72Mb',
-        'image2' => 'img/blur2.jpg',
-        'size2' => '58.1Kb'
+    'image' => 'img/blur.jpg',
+    'size' => '1.72Mb',
+    'image2' => 'img/blur2.jpg',
+    'size2' => '58.1Kb'
     ])
     @endcomponent
     <hr>
@@ -51,15 +51,15 @@
     'code' => '/api/upload?brightness=30'])
     @endcomponent
     @component('components.example',[
-        'image' => 'img/brightness.jpg',
-        'size' => '1.72Mb',
-        'image2' => 'img/brightness2.jpg',
-        'size2' => '58.1Kb'
+    'image' => 'img/brightness.jpg',
+    'size' => '1.72Mb',
+    'image2' => 'img/brightness2.jpg',
+    'size2' => '58.1Kb'
     ])
     @endcomponent
     <hr>
 
-    
+
     @component('components.code', [
     'title' => 'Compress With Crop',
     'details' => 'if you want to compress your image with crop<br> add <code
@@ -68,7 +68,7 @@
     'code' => '/api/upload?crop=200x200'])
     @endcomponent
 
-    
+
     @component('components.code', [
     'title' => 'Compress With Fit',
     'details' => 'if you want to compress your image with fit<br> add <code
@@ -83,11 +83,40 @@
         class="bg-zinc-300 rounded px-2">?url=</code> parameter to your url',
     'code' => '/api/upload?url=true'])
     @endcomponent
-
-
     @component('components.code', [
     'title' => 'Compress With All parameters',
     'details' => 'if you want use all parameters',
     'code' => '/api/upload?fit?300x200&url=true&quality=40&blur=50&brightness=30'])
+    @endcomponent
+    <hr>
+    @component('components.code', [
+    'title' => 'Compress With Flip',
+    'details' => 'if you want to compress your image with flip<br>
+    Specify the mode the image will be flipped. You can set <code class="bg-zinc-300 rounded px-2">?flip=h</code> for
+    horizontal (default) or
+    <code class="bg-zinc-300 rounded px-2">?flip=v</code>
+    for vertical flip.',
+    'code' => '/api/upload?flip=v'])
+    @endcomponent
+    @component('components.example',[
+    'image' => 'img/flip.jpg',
+    'size' => '1.72Mb',
+    'image2' => 'img/flip2.jpg',
+    'size2' => '58.1Kb'
+    ])
+    @endcomponent
+    <hr>
+    @component('components.code', [
+    'title' => 'Compress With Greyscale',
+    'details' => 'if you want to compress your image with greyscale<br> add <code
+        class="bg-zinc-300 rounded px-2">?greyscale=true</code> parameter to your url',
+    'code' => '/api/upload?greyscale=true'])
+    @endcomponent
+    @component('components.example',[
+    'image' => 'img/greyscale.png',
+    'size' => '1.72Mb',
+    'image2' => 'img/greyscale2.png',
+    'size2' => '58.1Kb'
+    ])
     @endcomponent
 </div>
